@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 10px;
+  background: $clr-grayish-blue;
+  font-weight: 500;
+  width: 100%;
+  height: 100vh;
+}
+
+p,
+span {
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: $break-medium) {
+}
+
+@media screen and (min-width: $break-desktop) {
+}
