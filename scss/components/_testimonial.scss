@@ -5,8 +5,10 @@
   position: relative;
   text-align: left;
   border-radius: 1rem;
-  margin: 1.5rem auto;
+  margin: 3rem auto;
   background-color: $clr-primary-white;
+  max-width: 600px;
+  color: $clr-primary-grayish-blue;
 
   &__header {
     display: flex;
@@ -34,21 +36,22 @@
 
   &__content {
     z-index: 99;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   &__heading {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
     line-height: 1.4;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
   }
   &__quotations {
     opacity: 0.7;
-    line-height: 1.3;
+    line-height: 1.5;
     font-size: 1.3rem;
   }
 
@@ -76,5 +79,25 @@
   &--blackish {
     background-color: $clr-primary-blackish-blue;
     color: $clr-primary-white;
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .testimonial {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    &[data-value="item1"] {
+      grid-column: 1/3;
+    }
+
+    &[data-value="item4"] {
+      grid-column: 2/4;
+    }
+    &[data-value="item5"] {
+      grid-row: 1/3;
+      grid-column: 4/5;
+    }
   }
 }
